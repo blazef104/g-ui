@@ -1,5 +1,6 @@
 <script>
-	import Button from '../lib/Buttons.svelte';
+	import Input from '$lib/Input.svelte';
+	import Button from '../lib/Button.svelte';
 </script>
 
 <h1>Welcome to your library project</h1>
@@ -8,4 +9,5 @@
 <!-- TEST -->
 <div style="margin-left: 0.2rem;">
 	<Button>Test</Button>
+	<Input></Input>
 </div>
