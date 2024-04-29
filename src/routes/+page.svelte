@@ -1,5 +1,7 @@
 <script>
 	import Input from '$lib/Input.svelte';
+	import Select from '$lib/Select.svelte';
+	import Table from '$lib/Table.svelte';
 	import Button from '../lib/Button.svelte';
 </script>
 
@@ -8,6 +10,16 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <!-- TEST -->
 <div style="margin-left: 0.2rem;">
-	<Button>Test</Button>
+	<Button severity="primary">Test</Button>
+	<Button severity="warning">Test</Button>
+	<Button severity="danger">Test</Button>
+	<Button severity="success">Test</Button>
+	<Button style="basic" severity="primary">Test</Button>
+	<Button style="basic" severity="warning">Test</Button>
+	<Button style="basic" severity="danger">Test</Button>
+	<Button style="basic" severity="success">Test</Button>
+	<Button style="empty">Test</Button>
 	<Input></Input>
+	<Select placeholder="Select an option"></Select>
 </div>
+<Table></Table>
