@@ -3,6 +3,7 @@
 	import Select from '$lib/Select.svelte';
 	import Table from '$lib/Table.svelte';
 	import Button from '../lib/Button.svelte';
+	import Badge from '../lib/Badge.svelte';
 </script>
 
 <h1>Welcome to your library project</h1>
@@ -21,5 +22,10 @@
 	<Button style="empty">Test</Button>
 	<Input></Input>
 	<Select placeholder="Select an option"></Select>
+	<Badge text="Low"></Badge>
+	<Badge text="Medium" severity="medium"></Badge>
+	<Badge text="High" severity="high"></Badge>
+	<Badge text="Primary" severity="primary"></Badge>
+	<Badge text="High" severity="high"></Badge>
 </div>
-<Table></Table>
+<Table footer={true}></Table>
