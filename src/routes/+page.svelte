@@ -4,6 +4,9 @@
 	import Table from '$lib/Table.svelte';
 	import Button from '../lib/Button.svelte';
 	import Badge from '../lib/Badge.svelte';
+	import Modal from '$lib/Modal.svelte';
+
+	let modalVisible = false;
 </script>
 
 <h1>Welcome to your library project</h1>
@@ -11,7 +14,7 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <!-- TEST -->
 <div style="margin-left: 0.2rem;">
-	<Button severity="primary">Test</Button>
+	<Button severity="primary" on:click={() => (modalVisible = true)}>Modal</Button>
 	<Button severity="warning">Test</Button>
 	<Button severity="danger">Test</Button>
 	<Button severity="success">Test</Button>
@@ -29,3 +32,11 @@
 	<Badge text="High" severity="high"></Badge>
 </div>
 <Table footer={true}></Table>
+{#if modalVisible}
+	<Modal on:close={() => (modalVisible = false)}>
+		<div slot="content">Test content</div>
+		<div slot="controls">
+			<Button severity="primary">Test</Button>
+		</div>
+	</Modal>
+{/if}

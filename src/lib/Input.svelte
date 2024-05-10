@@ -7,7 +7,7 @@
 </script>
 
 <input
-	class="p-1 border border-gray rounded focus:outline-none focus:border-b-2 focus:border-b-primary transition duration-300 ease-linear"
+	class="p-1 border border-gray rounded focus:outline-none focus:border-b-2 focus:border-b-primary transition duration-300 ease-linear pl-2"
 	{type}
 	{value}
 	{placeholder}
