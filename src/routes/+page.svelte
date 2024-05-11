@@ -5,8 +5,17 @@
 	import Button from '../lib/Button.svelte';
 	import Badge from '../lib/Badge.svelte';
 	import Modal from '$lib/Modal.svelte';
+	import Toaster from '$lib/Toaster.svelte';
 
 	let modalVisible = false;
+
+	let toasts = [];
+
+	function addToast(message, severity) {
+		toasts.push({ message: message, severity: severity });
+		console.log(toasts);
+		toasts = toasts;
+	}
 </script>
 
 <h1>Welcome to your library project</h1>
@@ -15,7 +24,17 @@
 <!-- TEST -->
 <div style="margin-left: 0.2rem;">
 	<Button severity="primary" on:click={() => (modalVisible = true)}>Modal</Button>
-	<Button severity="warning">Test</Button>
+	<Button
+		severity="warning"
+		on:click={() => {
+			addToast('test', 'warning');
+			addToast('test', 'danger');
+			addToast('test', 'success');
+			addToast('test', 'primary');
+		}}
+	>
+		Add Toast
+	</Button>
 	<Button severity="danger">Test</Button>
 	<Button severity="success">Test</Button>
 	<Button style="basic" severity="primary">Test</Button>
@@ -32,6 +51,7 @@
 	<Badge text="High" severity="high"></Badge>
 </div>
 <Table footer={true}></Table>
+
 {#if modalVisible}
 	<Modal on:close={() => (modalVisible = false)}>
 		<div slot="content">Test content</div>
@@ -40,3 +60,5 @@
 		</div>
 	</Modal>
 {/if}
+
+<Toaster {toasts}></Toaster>

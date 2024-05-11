@@ -13,3 +13,8 @@ export type SelectOptions = {
     value: string | number;
     title: string;
 }[];
+
+export type ToastStack = {
+    message: string;
+    severity: 'error' | 'warning' | 'success' | 'info';
+}[];
