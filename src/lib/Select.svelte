@@ -8,9 +8,8 @@
 </script>
 
 <select
-	class="p-1.5 border border-gray rounded focus:outline-none focus:border-b-2 focus:border-b-primary transition duration-400 ease-linear {$$props.class
-		? $$props.class
-		: ''}"
+	class="form-select p-1.5 border border-gray rounded focus:outline-none focus:border-b-2 focus:border-b-primary transition duration-400 ease-linear {$$props.class ??
+		''}"
 	{value}
 >
 	{#if placeholder}

@@ -1,2 +1,5 @@
-export { default as Button } from './Button.svelte';
-export { default as Table } from './Table.svelte'
+// import Button from './Button.svelte';
+// export default Button;
+
+import Table from './Table.svelte'
+export default Table;
